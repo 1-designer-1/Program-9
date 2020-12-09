@@ -21,7 +21,7 @@ namespace Program_9
             dataGridView1.RowCount = 10;
         }
 
-
+        /* Заполнение таблицы*/
         private void button1_Click(object sender, EventArgs e)
         {
             int pos = (int)numericUpDown1.Value - 1;
@@ -30,23 +30,55 @@ namespace Program_9
             dataGridView1[0, pos].Value = pos + 1;
             dataGridView1[1, pos].Value = textBox1.Text;
             dataGridView1[2, pos].Value = textBox2.Text;
-            /*Найти багаж по вессу*/
+            
 
 
         }
 
-        private void button2_Click(object sender, EventArgs e) // *поиск по коду*
+        /*Поиск по коду*/
+        private void button2_Click(object sender, EventArgs e)
         {
             int pos = (int)numericUpDown2.Value;
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
-                if (pos== (int)dataGridView1[0, i].Value)
+                if (pos == (int)dataGridView1[0, i].Value)
                 {
                     dataGridView1.Rows[i].Selected = true;
                     break;
                 }
             }
 
+        }
+
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Практическая работа 9 \n" +
+               "Серегин Денис\n" +
+               "Задание \n" +
+               "Багаж пассажира характеризуется количеством вещей и общим весом вещей. " +
+               "Сведения о багаже каждого пассажира представляют собой структуру с двумя полями: одно поле целого типа (количество вещей) и одно - действительное (вес в килограммах). " +
+               "Вывести результат на экран." +
+               "Найти багаж по вессу. ", "Задание", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        /*Найти багаж по вессу*/ 
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            int pos = (int)numericUpDown3.Value;
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                if (pos == (int)dataGridView1[2, i].Value)
+                {
+                    dataGridView1.Rows[i].Selected = true;//не работает
+                    break;
+                }
+            }
         }
     }
 }
