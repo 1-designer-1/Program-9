@@ -74,7 +74,7 @@ namespace Program_9
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 if (pos == (int)dataGridView1[2, i].Value)
-                {
+                { 
                     dataGridView1.Rows[i].Selected = true;//не работает
                     break;
                 }
