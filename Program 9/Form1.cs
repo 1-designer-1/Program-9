@@ -30,12 +30,12 @@ namespace Program_9
             dataGridView1[0, pos].Value = pos + 1;
             dataGridView1[1, pos].Value = textBox1.Text;
             dataGridView1[2, pos].Value = textBox2.Text;
-            // найти багаж по вессу
+            /*Найти багаж по вессу*/
 
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // *поиск по коду*
         {
             int pos = (int)numericUpDown2.Value;
             for (int i = 0; i < dataGridView1.RowCount; i++)
