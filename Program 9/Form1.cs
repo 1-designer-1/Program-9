@@ -77,7 +77,7 @@ namespace Program_9
                 { 
                     dataGridView1.Rows[i].Selected = true;//не работает
                     break;
-                }
+                } 
             }
         }
     }
