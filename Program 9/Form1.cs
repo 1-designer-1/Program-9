@@ -37,7 +37,7 @@ namespace Program_9
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int pos = (int)numericUpDown2.Value - 1;
+            int pos = (int)numericUpDown2.Value;
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 if (pos== (int)dataGridView1[0, i].Value)
