@@ -73,9 +73,9 @@ namespace Program_9
             int pos = (int)numericUpDown3.Value;
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
-                if (pos == (int)dataGridView1[2, i].Value)
+                if (pos == Convert.ToInt32(dataGridView1[2, i].Value))
                 { 
-                    dataGridView1.Rows[i].Selected = true;//не работает
+                    dataGridView1.Rows[i].Selected = true;
                     break;
                 } 
             }
